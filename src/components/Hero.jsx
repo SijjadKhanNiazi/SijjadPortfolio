@@ -43,7 +43,7 @@ const Hero = () => {
         {/* Profile Image */}
         <div className="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 border-4 border-blue-500 shadow-xl mx-auto hover:scale-105 transition">
           <img
-            src="https://media.licdn.com/dms/image/v2/D4D35AQExYY3vKBBDeQ/profile-framedphoto-shrink_400_400/B4DZz_estxIcAc-/0/1773812763785?e=1775415600&v=beta&t=uLQeaqirjEEDMpHEERP1yWyHcuPkiJ1HWwX8jdAUh3w"
+            src="../assets/sijjad.jpeg"
             alt="Muhammad Sijjad Khan"
             onError={handleImageError}
             className="w-full h-full object-cover"
