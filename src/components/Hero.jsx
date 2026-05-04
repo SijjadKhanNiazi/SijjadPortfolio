@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 import React, { useState, useEffect } from "react";
-
+import sijjadImg from "../assets/sijjad.jpeg";
 const Hero = () => {
   const fullText = "Muhammad Sijjad Khan";
   const [displayText, setDisplayText] = useState("");
@@ -43,7 +43,7 @@ const Hero = () => {
         {/* Profile Image */}
         <div className="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 border-4 border-blue-500 shadow-xl mx-auto hover:scale-105 transition">
           <img
-            src="../assets/sijjad.jpeg"
+            src={sijjadImg}
             alt="Muhammad Sijjad Khan"
             onError={handleImageError}
             className="w-full h-full object-cover"
