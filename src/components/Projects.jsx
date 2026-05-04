@@ -7,7 +7,7 @@ const Projects = () => {
       title: "CLICS – Loan Comparison System",
       category: "Final Year Project (AI + Web)",
       desc: "A smart platform that aggregates and compares loan schemes from multiple Pakistani banks using Retrieval-Augmented Generation (RAG). Enables users to ask natural language queries and get intelligent, contextual answers.",
-      tech: ["React", "Node.js", "LangChain", "Vector DB"],
+      tech: ["MERN stack", "LangChain", "RAG", "Scrapy framework", "APIs"],
       highlights: [
         "AI-powered query system (RAG)",
         "Multi-bank data integration",
@@ -15,6 +15,36 @@ const Projects = () => {
       ],
       github: "",
       live: "https://clics.vercel.app/",
+    },
+
+    {
+      title: "AgriConnect",
+      category: "Full-Stack (Agri-FinTech)",
+      desc: "Mianwali's local agri-marketplace for real-time Mandi rates and direct peer-to-peer crop/machinery trading.",
+      tech: ["React.js", "Supabase", "Tailwind CSS"],
+      highlights: [
+        "Live Mandi Ticker: Real-time price tracking for 10+ crops.",
+        "P2P Marketplace: Direct ad posting with secure storage.",
+        "Localization: Roman Urdu UI for rural accessibility.",
+        "Secure Auth: Profile & metadata management via Supabase.",
+      ],
+      github: "https://github.com/SijjadKhanNiazi/agriconnect",
+      live: "https://agrimianwali.vercel.app/",
+    },
+    {
+      title: "SKStore",
+      category: "Full-Stack (E-Commerce)",
+      desc: "A premium MERN platform for local market digitalization featuring seamless product and order management.",
+      tech: ["MERN Stack", "Tailwind CSS"],
+      highlights: [
+        "Dynamic Cart: Real-time quantity & price calculations.",
+        "Secure Checkout: Integrated shipping & payment workflow.",
+        "User Dashboard: Order history and profile management.",
+        "JWT Auth: Protected routes for sensitive user data.",
+        "Responsive UI: Modern, futuristic cross-device design.",
+      ],
+      github: "https://github.com/SijjadKhanNiazi/MERN-Ecom",
+      live: "",
     },
     {
       title: "CareerStream (Job Platform)",
@@ -42,7 +72,7 @@ const Projects = () => {
       github: "https://github.com/SijjadKhanNiazi/Recipee_SemesterProject",
     },
     {
-      title: "AI Chatbot with PDF/JSON",
+      title: "AI Chatbot with JSON",
       category: "AI Project",
       desc: "An intelligent chatbot that allows users to interact with documents (PDF/JSON) using natural language queries powered by LLMs.",
       tech: ["LangChain", "Python", "LLM"],
@@ -51,7 +81,7 @@ const Projects = () => {
         "Semantic search",
         "Conversational memory",
       ],
-      github: "https://github.com/SijjadKhanNiazi",
+      github: "https://github.com/SijjadKhanNiazi/Simply-RAG-bot-langchain-",
     },
     {
       title: "Online Voting System",

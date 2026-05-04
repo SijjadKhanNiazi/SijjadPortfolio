@@ -17,9 +17,10 @@ const Skills = () => {
     {
       title: "Backend",
       skills: [
-        { name: "Node.js", level: 60 },
-        { name: "Express.js", level: 60 },
-        { name: "MongoDB", level: 60 },
+        { name: "Node.js", level: 75 },
+        { name: "Express.js", level: 75 },
+        { name: "MongoDB", level: 75 },
+        { name: "Supabase", level: 60 },
       ],
     },
     {
@@ -33,8 +34,8 @@ const Skills = () => {
       title: "AI & Learning",
       skills: [
         { name: "Machine Learning", level: 60 },
-        { name: "LangChain", level: 60 },
-        { name: "RAG Systems", level: 60 },
+        { name: "LangChain", level: 75 },
+        { name: "RAG Systems", level: 75 },
       ],
     },
     {
