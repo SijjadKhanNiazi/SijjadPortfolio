@@ -1,27 +1,15 @@
 // src/components/Hero.jsx
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import sijjadImg from "../assets/sijjad.jpeg";
+import { gsap } from "gsap";
 
 const Hero = () => {
-  const fullText = "M Sijjad Khan";
-  const [displayText, setDisplayText] = useState("");
-  const [index, setIndex] = useState(0);
+  const titleRef = useRef(null);
 
-  // Typing effect
   useEffect(() => {
-    if (index < fullText.length) {
-      const timeout = setTimeout(() => {
-        setDisplayText((prev) => prev + fullText[index]);
-        setIndex(index + 1);
-      }, 100);
-      return () => clearTimeout(timeout);
-    } else {
-      setTimeout(() => {
-        setDisplayText("");
-        setIndex(0);
-      }, 2000);
-    }
-  }, [index]);
+    const tl = gsap.timeline();
+    tl.from(titleRef.current, { opacity: 0, y: -50, duration: 1.2, ease: "power3.out" });
+  }, []);
 
   return (
     <section
@@ -31,10 +19,13 @@ const Hero = () => {
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center">
         {/* LEFT SIDE (TEXT) */}
         <div className="text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-3">
-            {displayText}
-            <span className="animate-pulse">|</span>
+          <h1
+            ref={titleRef}
+            className="text-4xl md:text-6xl font-bold text-white mb-3"
+          >
+            M Sijjad Khan
           </h1>
+          <span className="animate-pulse">|</span>
 
           <p className="text-lg md:text-xl text-gray-300 mb-4">
             Frontend Developer | React Enthusiast

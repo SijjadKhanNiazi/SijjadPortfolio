@@ -1,21 +1,30 @@
 // src/components/Projects.jsx
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 const Projects = () => {
-  const projectList = [
-    {
-      title: "CLICS – Loan Comparison System",
-      category: "Final Year Project (AI + Web)",
-      desc: "A smart platform that aggregates and compares loan schemes from multiple Pakistani banks using Retrieval-Augmented Generation (RAG). Enables users to ask natural language queries and get intelligent, contextual answers.",
-      tech: ["MERN stack", "LangChain", "RAG", "Scrapy framework", "APIs"],
-      highlights: [
-        "AI-powered query system (RAG)",
-        "Multi-bank data integration",
-        "User-friendly UI for comparisons",
-      ],
-      github: "",
-      live: "https://clics.vercel.app/",
-    },
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const cards = containerRef.current?.querySelectorAll('.project-card');
+    if (cards) {
+      gsap.from(cards, {
+        opacity: 0,
+        y: 50,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 80%',
+        },
+      });
+    }
+  }, []);
+
 
     {
       title: "AgriConnect",
@@ -120,11 +129,11 @@ const Projects = () => {
         </p>
 
         {/* Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div ref={containerRef} className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projectList.map((project, idx) => (
             <div
               key={idx}
-              className="group relative p-6 rounded-xl bg-gray-900/60 backdrop-blur border border-gray-800 hover:border-blue-500 transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10"
+              className="project-card group relative p-6 rounded-xl bg-gray-900/60 backdrop-blur border border-gray-800 hover:border-blue-500 transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10"
             >
               {/* Category */}
               <span className="text-xs text-blue-400 uppercase tracking-wide">
